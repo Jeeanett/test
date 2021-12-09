@@ -1,0 +1,135 @@
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 80px auto 80px;
+    grid-template-areas: 
+        "n n n n n n n n n n n n"
+        "a a a a a a r r r r r r"
+        "f f f f f f f f f f f f";
+}
+
+.ul {
+    display: flex;
+    list-style: none;
+    padding: 8px 12px;
+    position: relative;
+    text-decoration: none;  
+}
+
+.navigation {
+    grid-area: n;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1em;
+}
+
+.main {
+    grid-area: a;
+}
+
+.footer {
+    grid-area: f;
+}
+
+.right {
+    grid-area: r;
+}
+
+  html, body {
+    box-sizing: border-box;
+    background-color: #ffeead;
+    height: 100%;
+    padding: 10px;
+    margin: 0px;
+  }
+  
+  .container > div:nth-child(1n) {
+    background-color: #ffffff;	
+  }
+  
+  .container > div:nth-child(2n) {
+    background-color: #88d8b0;
+  }
+  
+  .container > div:nth-child(3n) {
+    background-color: #ff6f69;
+  }
+  
+  .container > div:nth-child(4n) {
+    background-color: #ffcc5c;
+  }
+
+
+  @media(max-width: 550px) {
+    .container {
+        height: 100%;
+        display: grid;
+        grid-gap: 3px;
+        grid-template-columns: repeat(auto);
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "n"
+            "m"
+            "a"
+            "f"
+            "r";
+    }
+    
+    .navigation {
+        grid-area: n;
+        
+    }
+    
+    .menu {
+        grid-area: m;
+    }
+    
+    .main {
+        grid-area: a;
+    }
+    
+    .footer {
+        grid-area: f;
+    }
+    
+    .right {
+        grid-area: r;
+    }
+    
+    .container > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 1em;
+        color: #ffeead;
+      }
+      
+      html, body {
+        box-sizing: border-box;
+        background-color: #ffeead;
+        height: 100%;
+        padding: 10px;
+        margin: 0px;
+      }
+      
+      .container > div:nth-child(1n) {
+        background-color: #96ceb4;	
+      }
+      
+      .container > div:nth-child(2n) {
+        background-color: #88d8b0;
+      }
+      
+      .container > div:nth-child(3n) {
+        background-color: #ff6f69;
+      }
+      
+      .container > div:nth-child(4n) {
+        background-color: #ffcc5c;
+      }
+  }
