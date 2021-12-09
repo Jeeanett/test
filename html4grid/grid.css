@@ -11,7 +11,7 @@
 }
 
 .ul {
-    display: flex;
+    display: grid;
     list-style: none;
     padding: 8px 12px;
     position: relative;
